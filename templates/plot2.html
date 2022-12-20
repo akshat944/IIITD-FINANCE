@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src={{cdn_js[0] | safe}}></script>
+    <script type="text/javascript" src={{cdn_js[2] | safe}}></script>
+
+    <div id='chart1' class="chart" style="height: 900px;"></div>
+    <script>
+        var graph1 = {{ graphJSON | safe}};
+        Plotly.plot("chart1", graph1, {})
+    </script>
+
+    {{script1 | safe}}{{script2 | safe}}{{script3 | safe}}
+    {{div1 | safe}}{{div2 | safe}}{{div3 | safe}}
+</body>
+
+</html>

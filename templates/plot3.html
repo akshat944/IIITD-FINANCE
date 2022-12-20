@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Plots</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src={{cdn_js[0] | safe}}></script>
+    <script type="text/javascript" src={{cdn_js[2] | safe}}></script>
+
+    <div id='chart1' style="height: 900px;"></div>
+
+    {{script1 | safe}}
+    {{div1 | safe}}
+
+    <div id='chart2' style="height: 900px;"></div>
+
+    {{script2 | safe}}
+    {{div2 | safe}}
+
+    <script>
+        var graph2 = {{ graph2JSON | safe}};
+        Plotly.plot("chart2", graph2, {})
+    </script>
+    <script>
+        var graph1 = {{ graphJSON | safe}};
+        Plotly.plot("chart1", graph1, {})
+    </script>
+
+</body>
+
+</html>
