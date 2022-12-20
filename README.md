@@ -17,5 +17,7 @@ Contribution -
   Akunj Singh 2019141 : Analysis after clicking on 'ANALYZE STOCK FOR ME', Stock comparision Bokeh graphs , Web deployment , Debugging 
   
   Akshat Kumar Daksh 2019140 : Front end using HTML, Joining front end and flask, Candle stick plots (2 variation), Web scrapping for news and live price, web deployment, Debugging
-  
+
+
+http://iiitdfinance.me:8005/
   
