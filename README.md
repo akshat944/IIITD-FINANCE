@@ -8,6 +8,10 @@ On the homepage, users can find a list of company symbols that they can click on
 One of the standout features of our website is the stock comparison tool. By searching for two companies that the user is considering investing in, they can view the candlestick plots for both companies in real-time (with a 1 day, 1 minute interval), and compare the daily returns, highs and lows, and moving average filters for each company.
 
 On the details page for a particular company, users can find the current stock price in USD, as well as a candlestick plot for the company (with a maximum data interval of 1 day). The top 5 news stories for the company are also listed. By clicking on the "analyze for me" button, users can access a detailed analysis of the company.
+
+
+
+
 Contribution - 
 
   Akunj Singh 2019141 : Analysis after clicking on 'ANALYZE STOCK FOR ME', Stock comparision Bokeh graphs , Web deployment , Debugging 
