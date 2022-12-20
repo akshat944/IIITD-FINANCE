@@ -98,11 +98,21 @@ def news_s(stock, num):
     suma = list()
     tit = list()
     lnk = list()
-    for i in range(num):
-        x = news.get_yf_rss(stock)
-        xx = list(x[i].values())
-        suma.append(xx[0])  # summary
-        tit.append(xx[8])  # title
-        lnk.append(xx[5])  # link
+    x = news.get_yf_rss(stock)
+    pl = len(x)
+    if pl<num:
+        for i in range(pl):
+            x = news.get_yf_rss(stock)
+            xx = list(x[i].values())
+            suma.append(xx[0])  # summary
+            tit.append(xx[8])  # title
+            lnk.append(xx[5])  # link
+    else:
+        for i in range(num):
+            x = news.get_yf_rss(stock)
+            xx = list(x[i].values())
+            suma.append(xx[0])  # summary
+            tit.append(xx[8])  # title
+            lnk.append(xx[5])  # link
 
     return suma, tit, lnk

@@ -444,10 +444,11 @@ def details():
     rv = realtime(stock)
     xm = candlem(stock)
     # x = detail(stock)
-    nn = news_s(stock, 5)
-
+    numm = 5
+    nn = news_s(stock, numm)
+    num=len(nn[0])
     return render_template(
-        "detail.html", graphJSON=xm, nn=nn, rv=rv, nnl=5, stock=stock
+        "detail.html", graphJSON=xm, nn=nn, rv=rv, nnl=num, stock=stock
     )
 
 
